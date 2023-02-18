@@ -1,0 +1,667 @@
+/* ---------------------------Nav-Bar----------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+img{
+    cursor: pointer;
+}
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+.nav-right .user-icon{
+    width: 35px;
+    margin-right: 0;
+    border-radius: 50%;
+}
+.nav-left .menu-icon, .new-menu{
+    width: 22px;
+    margin-right: 25px;
+}
+.nav-left .logo{
+    width: 130px;
+}
+
+.nav-middle .search-box{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+.nav-middle .search-box input{
+    width: 400px;
+    outline: 0;
+    border: 0;
+    background: transparent;
+}
+.nav-middle .search-box img{
+    width: 15px;
+}
+.nav-middle .mice-icon{
+    width: 16px;
+}
+
+
+/* -----------------------------Side-Bar---------------------------- */
+
+.sidebar{
+    background: #fff;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+    
+    
+
+}
+.shorcut-list a img{
+    width: 20px;
+    margin-right: 20px;
+    
+}
+.shorcut-list a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+    
+}
+.shorcut-list a:first-child{
+    color: #ed3833;
+    
+}
+
+hr{
+    height: 1px;
+    width: 85%;
+    border: 0;
+    background: #ccc;
+    
+}
+
+.subscribed-list h3{
+    font-size: 13px;
+    margin: 20px 0;
+    color: #5a5a5a;
+    
+}
+.subscribed-list a img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+   
+
+}
+.subscribed-list a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    width: fit-content;
+    flex-wrap: wrap;
+    
+}
+/*------------------------When Click on Menu Icon-------------------------*/
+.small-sidebar{
+    /* transition: width 0.5s ease-in-out; */
+    transition: width 0.5s linear;
+    /* transition: width 0.5s ease; */
+    /* transition: width 0.5s ease-out; */
+    /* transition: width 0.5s ease-in; */
+    /* transition: width 0.5s cubic-bezier(0.42, 0, 0.58, 1); */
+    
+    width: 5%;
+
+    /* display: none; */
+}
+.small-sidebar h3{
+    display: none;
+}
+.small-sidebar a p{
+   display: none;
+}
+.small-sidebar hr{
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.newMenu{
+    display: none;
+}
+
+/*---------------------------------Main--------------------------------*/
+
+.container{
+    background: #f9f9f9;
+    padding-left: 17%;
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.large-container{
+    padding-left: 7%;
+
+}
+
+
+.banner{
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    height: 35%;
+    border-radius: 8px;
+}
+
+.container-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+}
+
+.vid-list .thumbnail{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.vid-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+}
+
+.vid-list .flex-div img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.vid-info{
+    color: #5a5a5a;
+    font-size: 13px;
+}
+
+.vid-info a{
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* -----------------------------FOR MAKING RESPONSIVE---------------------- */
+
+@media (max-width: 900px){
+    .menu-icon, .new-menu{
+        display: none;
+
+    }
+    .sidebar{
+        display: none;
+    }
+    .container, .large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .nav-right img{
+        display: none;
+    }
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+    }
+    .nav-middle .search-box input{
+        width: 100px;
+    }
+    .nav-middle .mice-icon{
+        display: none;
+    }
+    .logo{
+        width: 90px;
+    }
+}
+
+/*-------------------------------PLAY VIDEO PAGE------------------------*/
+
+.play-container{
+    padding-left: 2%;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.play-video{
+    flex-basis: 69%;
+}
+
+
+.play-video video{
+    width: 100%;
+}
+
+
+.right-sidebar{
+    flex-basis: 30%;
+}
+
+
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+
+.side-video-list img{
+    width: 100%;
+}
+
+
+.side-video-list .small-thumbnail{
+    flex-basis: 49%;
+}
+
+
+.side-video-list .vid-info{
+    flex-basis: 49%;
+}
+
+
+.play-video .tags a{ 
+    display: none;
+    color: #0000ff ;
+    font-size: 13px;
+}
+
+
+.play-video h3{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+
+.play-video .tags{
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+
+.play-video-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+
+.play-video-info a img{
+    width: 20px;
+    margin-right: 8px;
+
+}
+
+
+.play-video-info a{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+
+.play-video hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 10px 0;
+
+}
+
+
+.publisher{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.publisher div{
+    flex: 1;
+    line-height: 18px;
+    
+}
+
+
+.publisher img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.publisher div p{
+    columns: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.publisher div span{
+    font-size: 13px;
+    columns: #5a5a5a    ;
+}
+
+
+.publisher button{
+    color: #fff;
+    background: red;
+    outline: 0;
+    border: 0;
+    padding: 8px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.vid-description{
+    padding-left: 55px;
+    margin: 15px 0;
+}
+
+
+.vid-description p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5a5a5a;
+}
+
+
+.vid-description h4{
+    color: #5a5a5a;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+.add-comment{
+    display: flex;
+    align-items: center;    
+    margin: 30px 0;
+}
+
+
+.add-comment img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.add-comment input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding-top: 10px;
+    background: transparent;
+}
+
+
+.old-comment{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+.old-comment img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.old-comment h3{
+    /* color: #5a5a5a; */
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+
+.old-comment h3 span{
+    font-size: 12px;
+    margin-left: 8px;
+    font-weight: 500;
+    color: #5a5a5a;
+
+}
+
+
+.old-comment .comment-action{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+
+.old-comment .comment-action img{
+    width: 20px;
+    border-radius: 0;
+    margin-right: 5px;
+}
+
+
+.old-comment .comment-action span{
+    color: #5a5a5a;
+    margin-right: 20px;
+}
+
+
+.old-comment .comment-action a{
+color: #0000ff;
+}
+
+.new-menu{
+    display: none;
+}
+
+.none{
+    display: block;
+}
+
+
+
+@media (max-width: 900px){
+    .play-video{
+        flex-basis: 100%;
+    }
+    .right-sidebar{
+        flex-basis: 100%;
+    }
+    .play-container{
+        padding-left: 5%;
+    }
+    .vid-description{
+        padding-left: 0;
+    }
+    .play-video .play-video-info a{
+        margin-left: 0;
+        margin-right: 15px ;
+        margin-top: 15px;
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+/*------------------------FOR POPUP--------------------------------*/
+.popup .img{
+    width: 100%;
+    height: 70%;
+    border-radius: 3%;
+    
+}
+figcaption.popup{
+    position: absolute;
+    width: 280px;
+    height: 330px;
+    bottom: 1%;
+    /* top: 92%; */
+    border-radius: 3%;
+    box-shadow: 2px 2px 10px;
+    background-color: #fff;
+    padding-bottom: 50px;
+    visibility: hidden;
+
+}
+figcaption.popup p{
+    color: #000;
+}
+
+figure.no-popup:hover
+figcaption.popup{
+    position: absolute;
+    visibility: visible;
+}
+
+
+.popup-title img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.popup-title a{
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup-title{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.popup-info{
+    margin-left: 55px;
+    padding-bottom: 5px;
+}
+      /*---------------------FOR ROW 2------------------------------*/
+figcaption.popup-row2{
+    position: absolute;
+    width: 280px;
+    height: 330px;
+    /* bottom: 1%; */
+    top: 92%;
+    border-radius: 3%;
+    box-shadow: 2px 2px 10px;
+    background-color: #fff;
+    padding-bottom: 50px;
+    visibility: hidden;
+
+}
+
+
+figcaption.popup-row2 p{
+    color: #000;
+}
+
+figure.no-popup:hover
+figcaption.popup-row2{
+    position: absolute;
+    visibility: visible;
+}
+.popup-row2 .img{
+    width: 100%;
+    height: 70%;
+    border-radius: 3%;
+    
+}
+
+/*--------------------------------------FOR ROW 3------------------------------*/
+
+figcaption.popup-row3{
+    position: absolute;
+    width: 280px;
+    height: 330px;
+    /* bottom: 10%; */
+    top: 137%;
+    
+    border-radius: 3%;
+    box-shadow: 2px 2px 10px;
+    background-color: #fff;
+    padding-bottom: 50px;
+    /* padding-left: 20px; */
+    
+    visibility: hidden;
+
+}
+
+
+figcaption.popup-row3 p{
+    color: #000;
+}
+
+figure.no-popup:hover
+figcaption.popup-row3{
+    position: absolute;
+    visibility: visible;
+}
+.popup-row3 .img{
+    width: 100%;
+    height: 70%;
+    border-radius: 3%;
+    
+}
+
+
